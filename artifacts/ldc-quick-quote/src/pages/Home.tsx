@@ -74,9 +74,9 @@ export default function Home() {
       {/* Background with Dark Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src={`${import.meta.env.BASE_URL}images/hero-bg.png`}
+          src={`${import.meta.env.BASE_URL}images/hero-bg.jpg`}
           alt="LDC Courier logistics background"
-          className="w-full h-full object-cover opacity-40 scale-105"
+          className="w-full h-full object-cover opacity-50 scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/80 to-background/95 backdrop-blur-[2px]" />
       </div>
@@ -89,9 +89,12 @@ export default function Home() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-center mb-8 w-full"
         >
-          <div className="inline-flex items-center justify-center space-x-2 bg-white/5 backdrop-blur-md border border-white/10 px-4 py-2 rounded-full mb-6">
-            <span className="text-xl">🚚</span>
-            <span className="font-display font-bold text-white tracking-wide uppercase text-sm">LDC Courier</span>
+          <div className="inline-flex items-center justify-center mb-6">
+            <img
+              src={`${import.meta.env.BASE_URL}images/logo.png`}
+              alt="LDC Courier"
+              className="h-16 object-contain drop-shadow-lg brightness-0 invert"
+            />
           </div>
           
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-4 drop-shadow-lg">
