@@ -1,0 +1,48 @@
+Role & Context:
+Act as a Senior Frontend Developer and Conversion Rate Optimization (CRO) expert. I want to increase conversions on my courier website, https://ldccourier.co.uk/, by adding a frictionless "Quick Quote Calculator" directly to the homepage hero section.
+
+The Objective:
+Create a production-ready UI component for this Quick Quote Calculator. The goal of this tool is to act as a lead-capture stepping stone. It should not calculate the price directly on the homepage; instead, it captures the initial data and transitions the user to "Step 2" of the actual portal booking page, with the fields already pre-filled.
+
+Design & UI Requirements:
+
+Brand Matching: Analyze https://ldccourier.co.uk/. The component MUST seamlessly blend with the existing website's exact layout, color combination, typography, and styling (e.g., button colors, border radiuses, shadows, and input field styling).
+
+Layout: Design it as a clean, elevated card (glassmorphism or solid background matching the brand theme) that can sit over the hero banner or directly beneath the main headline.
+
+Responsiveness: It must look perfect on mobile (stacked inputs) and desktop (inline or grid layout).
+
+Functional Requirements (The Form):
+The calculator must contain the following fields:
+
+Collection Postcode: Text input (Placeholder: e.g., "DY10...")
+
+Delivery Postcode: Text input (Placeholder: e.g., "B1...")
+
+Vehicle Type: Dropdown select menu (Options based on the site's fleet: "Small Van", "Short Wheel Base", "Long Wheel Base", "Luton / 7.5T Vehicle").
+
+Call to Action (CTA) Button: Text should read "Get Quote / Continue". Make this the highest-contrast, most clickable element in the component using the site's primary action color.
+
+Interaction & Behavior logic:
+
+Validation: Ensure the user has entered basic text into the postcode fields before allowing submission.
+
+Action (The Handoff): When the CTA is clicked, do not show a price. Instead, trigger a visually appealing loading state on the button for 1 second, then open an embedded Popup Modal (or simulate a seamless redirect).
+
+Data Passing: Structure the code so that the inputs are appended as URL parameters (e.g., portal.html?collection=DY10&delivery=B1&vehicle=luton). This is crucial so the actual booking portal can pick up these variables and start the user at "Step 2".
+
+Output Requested:
+Please provide:
+
+The HTML & CSS/Tailwind (or a React component) for the Quick Quote widget.
+
+The JavaScript logic required to capture the inputs, validate them, and generate the URL parameters for the redirect/popup.
+
+Brief instructions on where to inject this code on the current ldccourier.co.uk homepage for maximum conversion impact.
+
+💡 Why this prompt works:
+Contextualizes the Goal: It tells the AI why you are doing this (Conversion Rate Optimization) so it designs the button and form to be highly clickable.
+
+Enforces Brand Consistency: It explicitly commands the AI/Developer to analyze your live site to match the colors and fonts, so it doesn't just output a generic grey box.
+
+Defines the Logic: It clearly maps out the "Smoke and Mirrors" approach—capturing the info and passing it via URL parameters to the actual portal so the user feels they are already halfway through the booking process (which is a proven psychological trick to boost conversion).

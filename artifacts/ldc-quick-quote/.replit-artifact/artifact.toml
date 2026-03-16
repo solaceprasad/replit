@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "LDC Courier Quick Quote"
+version = "1.0.0"
+id = "artifacts/ldc-quick-quote"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+localPort = 24223
+name = "web"
+paths = ["/"]
+
+[services.development]
+run = "pnpm --filter @workspace/ldc-quick-quote run dev"
+
+[services.env]
+PORT = "24223"
+BASE_PATH = "/"
+
+[services.production]
+build = ["pnpm", "--filter", "@workspace/ldc-quick-quote", "run", "build"]
+publicDir = "artifacts/ldc-quick-quote/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"

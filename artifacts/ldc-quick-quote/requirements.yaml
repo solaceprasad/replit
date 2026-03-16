@@ -1,0 +1,13 @@
+packages:
+  "framer-motion": "Smooth page entry and form interaction animations"
+  "@hookform/resolvers": "Zod validation for the quote form"
+  "react-hook-form": "Form state management"
+
+images:
+  - path: "artifacts/ldc-quick-quote/public/images/hero-bg.png"
+    description: "Cinematic night time shot of a sleek delivery van driving on a highway, dark navy blue atmosphere with subtle red tail light trails, professional logistics and courier theme"
+    aspect_ratio: "16:9"
+
+notes:
+  - No backend API required. This is a standalone static widget.
+  - Redirects to external portal on successful submission.
