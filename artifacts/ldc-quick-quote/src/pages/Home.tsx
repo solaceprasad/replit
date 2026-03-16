@@ -60,12 +60,12 @@ export default function Home() {
     await new Promise((resolve) => setTimeout(resolve, 1200));
 
     const params = new URLSearchParams({
-      collection: data.collection,
-      delivery: data.delivery,
+      pickup_suite: data.collection.trim().toUpperCase(),
+      dropoff_suite: data.delivery.trim().toUpperCase(),
       vehicle: data.vehicle,
     });
 
-    const portalUrl = `https://ldccourier.co.uk/portal.html?${params.toString()}`;
+    const portalUrl = `https://portal.ldccourier.co.uk/order/where?${params.toString()}`;
     window.open(portalUrl, "_blank");
   };
 
@@ -207,7 +207,7 @@ export default function Home() {
                               <Loader2 className="h-5 w-5 animate-spin mr-2" />
                             ) : (
                               <>
-                                Get Quote / Continue
+                                Get Quote
                                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                               </>
                             )}
